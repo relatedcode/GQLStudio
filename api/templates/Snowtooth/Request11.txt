@@ -1,0 +1,13 @@
+wss://snowtooth.moonhighway.com/graphql
+
+{
+}
+
+subscription TrailStatusChange {
+	trailStatusChange {
+		id name status difficulty groomed trees night
+	}
+}
+
+{
+}

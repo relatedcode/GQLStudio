@@ -1,0 +1,109 @@
+https://api.yelp.com/v3/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]",
+  "Accept-Language": "en-US"
+}
+
+query GetBusiness($id: String) {
+  business(id: $id) {
+    name
+    id
+    alias
+    is_claimed
+    is_closed
+    url
+    phone
+    display_phone
+    review_count
+    rating
+    price
+    photos
+    distance
+    categories {
+      title
+      alias
+      parent_categories {
+        title
+        alias
+      }
+      country_whitelist {
+        code
+      }
+      country_blacklist {
+        code
+      }
+    }
+    location {
+      address1
+      address2
+      address3
+      city
+      state
+      postal_code
+      country
+      formatted_address
+    }
+    coordinates {
+      latitude
+      longitude
+    }
+    hours {
+      hours_type
+      is_open_now
+      open {
+        is_overnight
+        end
+        start
+        day
+      }
+    }
+    special_hours {
+      is_overnight
+      is_closed
+      end
+      start
+      date
+    }
+    reviews {
+      id
+      rating
+      text
+      time_created
+      url
+      user {
+        id
+        profile_url
+        image_url
+        name
+      }
+    }
+    attributes {
+      gender_neutral_restrooms {
+        name_code
+        value_code
+      }
+      open_to_all {
+        name_code
+        value_code
+      }
+      wheelchair_accessible {
+        name_code
+        value_code
+      }
+    }
+    transactions {
+      restaurant_reservations {
+        url
+      }
+    }
+    messaging {
+      url
+      use_case_text
+    }
+  }
+}
+
+{
+	"id": "4KfQnlcSu4bbTqnvGdGptw"
+}

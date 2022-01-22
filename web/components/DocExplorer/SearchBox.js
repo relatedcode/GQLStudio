@@ -1,0 +1,58 @@
+/**
+ *  Copyright (c) 2021 GraphQL Contributors.
+ *
+ *  This source code is licensed under the MIT license found in the
+ *  LICENSE file in the root directory of this source tree.
+ */
+
+/* eslint-disable */
+
+import { debounce } from 'lodash';
+import React from 'react';
+
+export default class SearchBox extends React.Component {
+  debouncedOnSearch;
+
+  constructor(props) {
+    super(props);
+    this.state = { value: props.value || '' };
+    this.debouncedOnSearch = debounce(this.props.onSearch, 200);
+  }
+
+  render() {
+    return (
+      <label className="search-box">
+        <div className="search-box-icon" aria-hidden="true">
+          {'\u26b2'}
+        </div>
+        <input
+          value={this.state.value}
+          onChange={this.handleChange}
+          type="text"
+          placeholder={this.props.placeholder}
+          aria-label={this.props.placeholder}
+        />
+        {this.state.value && (
+          <button
+            className="search-box-clear"
+            onClick={this.handleClear}
+            aria-label="Clear search input"
+          >
+            {'\u2715'}
+          </button>
+        )}
+      </label>
+    );
+  }
+
+  handleChange = (event) => {
+    const { value } = event.currentTarget;
+    this.setState({ value });
+    this.debouncedOnSearch(value);
+  };
+
+  handleClear = () => {
+    this.setState({ value: '' });
+    this.props.onSearch('');
+  };
+}

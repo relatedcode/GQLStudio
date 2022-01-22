@@ -1,0 +1,19 @@
+https://swop.cx/graphql
+
+{
+  "Authorization": "ApiKey [ENTER YOUR API SECRET HERE]"
+}
+
+query GetLatest($baseCurrency: String, $quoteCurrencies: [String!]) {
+  latest(baseCurrency: $baseCurrency, quoteCurrencies: $quoteCurrencies) {
+    baseCurrency
+    quoteCurrency
+    quote
+    date
+  }
+}
+
+{
+	"baseCurrency": "EUR",
+	"quoteCurrencies": ["USD", "JPY", "CAD", "GBP"]
+}

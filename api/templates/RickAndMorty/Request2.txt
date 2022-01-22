@@ -1,0 +1,55 @@
+https://rickandmortyapi.com/graphql
+
+{
+}
+
+query GetCharacters($page: Int!, $filter: FilterCharacter) {
+  characters(page: $page, filter: $filter) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      image
+      created
+      origin {
+        id
+        name
+        type
+        dimension
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        created
+      }
+      episode {
+        id
+        name
+        air_date
+        episode
+        created
+      }
+    }
+  }
+}
+
+{
+	"page": 1,
+	"filter": {
+		"name": "Ri",
+		"status": "Alive",
+		"gender": "male"
+	}
+}

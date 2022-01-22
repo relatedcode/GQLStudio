@@ -1,0 +1,250 @@
+type User {
+  objectId: String!
+  name: String!
+  email: String!
+  groups: [String]!
+  photoURL: String
+  createdAt: Date!
+  updatedAt: Date!
+}
+type Subscription {
+  user(objectId: String, groupId: String): User!
+}
+type Query {
+  users(groupId: String, updatedAt: Date): [User]
+  user(objectId: String, email: String): User
+}
+type Mutation {
+  createUser(
+    objectId: String!
+    name: String!
+    email: String!
+    groups: [String]!
+    photoURL: String
+  ): User!
+  updateUser(
+    objectId: String!
+    name: String
+    email: String
+    groups: [String]
+    photoURL: String
+  ): User!
+}
+
+type Credential {
+  userId: String!
+  accessToken: String
+  sshPrivateKey: String
+  sshKeyFingerprint: String
+  sshPassphrase: String
+  customDomain: String
+  createdAt: Date!
+  updatedAt: Date!
+}
+type Query {
+  credential: Credential
+}
+type Mutation {
+  createCredential(
+    accessToken: String
+    sshPrivateKey: String
+    sshKeyFingerprint: String
+    sshPassphrase: String
+    customDomain: String
+  ): Credential!
+  updateCredential(
+    accessToken: String
+    sshPrivateKey: String
+    sshKeyFingerprint: String
+    sshPassphrase: String
+    customDomain: String
+  ): Credential!
+}
+
+type Group {
+  objectId: String!
+  title: String!
+  ownerId: String!
+  access: [String]!
+  write: [String]!
+  isDeleted: Boolean!
+  createdAt: Date!
+  updatedAt: Date!
+}
+extend type Subscription {
+  group: Group!
+}
+extend type Query {
+  groups(userId: String, updatedAt: Date): [Group]
+  group(objectId: String!): Group
+}
+extend type Mutation {
+  createGroup(
+    objectId: String!
+    title: String!
+    ownerId: String!
+    access: [String]!
+    write: [String]!
+    isDeleted: Boolean
+    createdAt: Date
+  ): Group!
+  updateGroup(
+    objectId: String!
+    title: String
+    ownerId: String
+    access: [String]
+    write: [String]
+    isDeleted: Boolean
+  ): Group!
+}
+
+type Request {
+  objectId: String!
+  groupId: String!
+  title: String!
+  link: String
+  body: String
+  headers: String
+  notes: String
+  variables: String
+  appSyncKey: String
+  wsProtocol: String
+  isDeleted: Boolean
+  createdAt: Date!
+  updatedAt: Date!
+}
+extend type Subscription {
+  request(groupId: String, objectId: String): Request!
+}
+extend type Query {
+  requests(groupId: String, userId: String, updatedAt: Date): [Request]
+  request(objectId: String!): Request
+}
+extend type Mutation {
+  createRequest(
+    objectId: String!
+    groupId: String!
+    title: String!
+    link: String
+    body: String
+    headers: String
+    notes: String
+    variables: String
+    appSyncKey: String
+    wsProtocol: String
+    isDeleted: Boolean
+    createdAt: Date
+  ): Request!
+  updateRequest(
+    objectId: String!
+    groupId: String
+    title: String
+    link: String
+    body: String
+    headers: String
+    notes: String
+    variables: String
+    appSyncKey: String
+    wsProtocol: String
+    isDeleted: Boolean
+  ): Request!
+}
+
+type Project {
+  objectId: String!
+  title: String!
+  region: String!
+  size: String!
+  ownerId: String!
+  status: String!
+  dropletIPAddress: String
+  dropletId: String
+  domainRecordId: String
+  dropletName: String
+  link: String
+  logs: [String]
+  type: String
+  hasuraAdminSecret: String
+  hasuraDBPassword: String
+  directusAdminEmail: String
+  directusAdminPassword: String
+  directusKey: String
+  directusSecret: String
+  directusDBPassword: String
+  gqliteAdminEmail: String
+  gqliteAdminPassword: String
+  gqliteSecretKey: String
+  gqliteMinioPassword: String
+  gqliteRedisPassword: String
+  gqliteDBPassword: String
+  isDeleted: Boolean
+  createdAt: Date!
+  updatedAt: Date!
+}
+extend type Subscription {
+  project(ownerId: String): Project!
+}
+extend type Query {
+  projects(ownerId: String): [Project]
+  project(objectId: String!): Project
+}
+extend type Mutation {
+  createProject(
+    objectId: String!
+    title: String!
+    region: String!
+    size: String!
+    ownerId: String!
+    status: String!
+    dropletIPAddress: String
+    dropletId: String
+    domainRecordId: String
+    dropletName: String
+    link: String
+    logs: [String]
+    type: String
+    hasuraAdminSecret: String
+    hasuraDBPassword: String
+    directusAdminEmail: String
+    directusAdminPassword: String
+    directusKey: String
+    directusSecret: String
+    directusDBPassword: String
+    gqliteAdminEmail: String
+    gqliteAdminPassword: String
+    gqliteSecretKey: String
+    gqliteMinioPassword: String
+    gqliteRedisPassword: String
+    gqliteDBPassword: String
+    isDeleted: Boolean
+  ): Project!
+  updateProject(
+    objectId: String!
+    title: String
+    region: String
+    size: String
+    ownerId: String
+    status: String
+    dropletIPAddress: String
+    dropletId: String
+    domainRecordId: String
+    dropletName: String
+    link: String
+    logs: [String]
+    type: String
+    hasuraAdminSecret: String
+    hasuraDBPassword: String
+    directusAdminEmail: String
+    directusAdminPassword: String
+    directusKey: String
+    directusSecret: String
+    directusDBPassword: String
+    gqliteAdminEmail: String
+    gqliteAdminPassword: String
+    gqliteSecretKey: String
+    gqliteMinioPassword: String
+    gqliteRedisPassword: String
+    gqliteDBPassword: String
+    isDeleted: Boolean
+  ): Project!
+}

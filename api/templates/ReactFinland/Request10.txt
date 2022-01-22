@@ -1,0 +1,88 @@
+https://api.react-finland.fi/graphql
+
+{
+}
+
+query GetThemes {
+  themes {
+    id
+    fonts {
+      primary
+      secondary
+      variants {
+        family
+        weight
+        style
+        fileName
+        formats
+        href
+      }
+    }
+    textures {
+      url
+      title
+      style {
+        backgroundSize
+      }
+    }
+    colors {
+      primary
+      secondary
+      text
+      background
+    }
+    logos {
+      black {
+        withoutText {
+          url
+          title
+          style {
+            backgroundSize
+          }
+        }
+        withText {
+          url
+          title
+          style {
+            backgroundSize
+          }
+        }
+      }
+      colored {
+        withoutText {
+          url
+          title
+          style {
+            backgroundSize
+          }
+        }
+        withText {
+          url
+          title
+          style {
+            backgroundSize
+          }
+        }
+      }
+      white {
+        withoutText {
+          url
+          title
+          style {
+            backgroundSize
+          }
+        }
+        withText {
+          url
+          title
+          style {
+            backgroundSize
+          }
+        }
+      }
+    }
+  }
+}
+
+{
+}

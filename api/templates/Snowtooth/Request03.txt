@@ -1,0 +1,19 @@
+https://snowtooth.moonhighway.com
+
+{
+}
+
+query GetLiftFor($id: ID!) {
+  Lift(id: $id) {
+    id
+    name
+    status
+    capacity
+    night
+    elevationGain
+  }
+}
+
+{
+	"id": "jolly-roger"
+}

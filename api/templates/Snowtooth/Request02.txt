@@ -1,0 +1,23 @@
+https://snowtooth.moonhighway.com
+
+{
+}
+
+query GetAllTrails($status: TrailStatus) {
+  allTrails(status: $status) {
+    id
+    name
+    status
+    difficulty
+    groomed
+    trees
+    night
+    accessedByLifts {
+      id
+    }
+  }
+}
+
+{
+	"status": "OPEN"
+}

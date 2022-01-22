@@ -1,0 +1,95 @@
+https://api.catalysis-hub.org/graphql
+
+{
+}
+
+query GetReactionSystems($first: Int, $after: String) {
+  reactionSystems(first: $first, after: $after) {
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    edges {
+      node {
+        name
+        energyCorrection
+        aseId
+        id
+        reactions {
+          id
+          chemicalComposition
+          surfaceComposition
+          facet
+          sites
+          coverages
+          reactants
+          products
+          reactionEnergy
+          activationEnergy
+          dftCode
+          dftFunctional
+          username
+          pubId
+          textsearch
+          Equation
+        }
+        systems {
+          id
+          uniqueId
+          ctime
+          mtime
+          username
+          numbers
+          positions
+          cell
+          pbc
+          initialMagmoms
+          initialCharges
+          masses
+          tags
+          momenta
+          constraints
+          calculator
+          calculatorParameters
+          energy
+          freeEnergy
+          forces
+          stress
+          dipole
+          magmoms
+          magmom
+          charges
+          keyValuePairs
+          data
+          natoms
+          fmax
+          smax
+          volume
+          mass
+          charge
+          Formula
+          Cifdata
+          Pbc
+          Ctime
+          Mtime
+          Adsorbate
+          Reaction
+          Username
+          Substrate
+          Facet
+          DftCode
+          DftFunctional
+          InputFile
+        }
+      }
+    }
+  }
+}
+
+{
+	"first": 10,
+	"after": ""
+}

@@ -1,0 +1,36 @@
+https://swapi-graph.netlify.app/graphql
+
+{
+}
+
+query GetAllPeople($after: String, $first: Int, $before: String, $last: Int) {
+  allPeople(after: $after, first: $first, before: $before, last: $last) {
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    people {
+      id
+      created
+      edited
+      name
+      birthYear
+      eyeColor
+      gender
+      hairColor
+      height
+      mass
+      skinColor
+    }
+  }
+}
+
+{
+	"after": "",
+	"first": 10,
+	"before": "",
+	"last": 10
+}

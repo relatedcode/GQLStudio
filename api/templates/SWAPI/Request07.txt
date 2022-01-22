@@ -1,0 +1,38 @@
+https://swapi-graph.netlify.app/graphql
+
+{
+}
+
+query GetSpecies($id: ID) {
+  species(id: $id) {
+    name
+    classification
+    designation
+    averageHeight
+    averageLifespan
+    eyeColors
+    hairColors
+    skinColors
+    language
+    created
+    edited
+    id
+    homeworld {
+      id
+    }
+    personConnection {
+      people {
+        id
+      }
+    }
+    filmConnection {
+      films {
+        id
+      }
+    }
+  }
+}
+
+{
+	"id": "c3BlY2llczox"
+}

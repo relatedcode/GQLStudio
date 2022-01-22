@@ -1,0 +1,1344 @@
+https://api.react-finland.fi/graphql
+
+{
+}
+
+query GetConference($id: ID!) {
+  conference(id: $id) {
+    id
+    name
+    year
+    startDate
+    endDate
+    slogan
+    websiteUrl
+    organizer {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    locations {
+      name
+      about
+      city
+      address
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+    }
+    organizers {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    mcs {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    partners {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    sponsors {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    goldSponsors {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    silverSponsors {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    bronzeSponsors {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    platformSponsors {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    schedules {
+      day
+      description
+      location {
+        name
+        about
+        city
+        address
+      }
+      intervals {
+        begin
+        end
+        title
+      }
+    }
+    allSpeakers {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    speakers {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    keynoteSpeakers {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    fullTalkSpeakers {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      image {
+        url
+        title
+        style {
+          backgroundSize
+        }
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+        image {
+          url
+          title
+        }
+        social {
+          homepage
+          twitter
+          github
+          facebook
+          googleMaps
+          medium
+          instagram
+          linkedin
+          youtube
+          vk
+          pinterest
+          vimeo
+          dribble
+          devto
+          twitch
+        }
+        country {
+          name
+          code
+        }
+      }
+      talks {
+        type
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+        location {
+          name
+          about
+          city
+          address
+        }
+        people {
+          firstName
+          lastName
+          name
+          about
+          aboutShort
+          company
+          type
+          keywords
+          noPhotography
+        }
+        urls {
+          web
+          slides
+          video
+        }
+        sessions {
+          type
+          level
+          title
+          hasTitle
+          description
+          keywords
+          day
+          begin
+          end
+        }
+      }
+      workshops {
+        type
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+        location {
+          name
+          about
+          city
+          address
+        }
+        people {
+          firstName
+          lastName
+          name
+          about
+          aboutShort
+          company
+          type
+          keywords
+          noPhotography
+        }
+        urls {
+          web
+          slides
+          video
+        }
+        sessions {
+          type
+          level
+          title
+          hasTitle
+          description
+          keywords
+          day
+          begin
+          end
+        }
+      }
+      noPhotography
+    }
+    lightningTalkSpeakers {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    workshopInstructors {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    talks {
+      type
+      title
+      hasTitle
+      description
+      keywords
+      day
+      begin
+      end
+      location {
+        name
+        about
+        city
+        address
+      }
+      people {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      urls {
+        web
+        slides
+        video
+      }
+      sessions {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    workshops {
+      type
+      level
+      title
+      hasTitle
+      description
+      keywords
+      day
+      begin
+      end
+      location {
+        name
+        about
+        city
+        address
+      }
+      people {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      urls {
+        web
+        slides
+        video
+      }
+      sessions {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      parent {
+        begin
+        end
+        title
+      }
+    }
+    attendees {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    keynotes {
+      type
+      level
+      title
+      hasTitle
+      description
+      keywords
+      day
+      begin
+      end
+      location {
+        name
+        about
+        city
+        address
+      }
+      people {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      urls {
+        web
+        slides
+        video
+      }
+      sessions {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      parent {
+        begin
+        end
+        title
+      }
+    }
+    fullTalks {
+      type
+      title
+      hasTitle
+      description
+      keywords
+      day
+      begin
+      end
+      location {
+        name
+        about
+        city
+        address
+      }
+      people {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      urls {
+        web
+        slides
+        video
+      }
+      sessions {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+    lightningTalks {
+      type
+      level
+      title
+      hasTitle
+      description
+      keywords
+      day
+      begin
+      end
+      location {
+        name
+        about
+        city
+        address
+      }
+      people {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      urls {
+        web
+        slides
+        video
+      }
+      sessions {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      parent {
+        begin
+        end
+        title
+      }
+    }
+  }
+}
+
+{
+	"id": "freezing-edge-2020"
+}

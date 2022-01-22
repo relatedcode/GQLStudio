@@ -1,0 +1,60 @@
+https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql
+
+{
+}
+
+query GetRoute($id: String!) {
+  route(id: $id) {
+    id
+    gtfsId
+    shortName
+    longName
+    mode
+    type
+    desc
+    url
+    color
+    textColor
+    bikesAllowed
+    agency {
+      id
+      gtfsId
+      name
+      url
+      timezone
+      lang
+      phone
+      fareUrl
+    }
+    patterns {
+      id
+      directionId
+      name
+      code
+      headsign
+      semanticHash
+    }
+    stops {
+      id
+      gtfsId
+      name
+      lat
+      lon
+      code
+      desc
+      zoneId
+      url
+      locationType
+      wheelchairBoarding
+      direction
+      timezone
+      vehicleType
+      vehicleMode
+      platformCode
+    }
+  }
+}
+
+{
+	"id": "HSL:2436N"
+}

@@ -1,0 +1,47 @@
+https://swapi-graph.netlify.app/graphql
+
+{
+}
+
+query GetFilm($id: ID) {
+  film(id: $id) {
+    id
+    created
+    edited
+    title
+    episodeID
+    openingCrawl
+    director
+    producers
+    releaseDate
+    speciesConnection {
+      species {
+        id
+      }
+    }
+    starshipConnection {
+      starships {
+        id
+      }
+    }
+    vehicleConnection {
+      vehicles {
+        id
+      }
+    }
+    characterConnection {
+      characters {
+        id
+      }
+    }
+    planetConnection {
+      planets {
+        id
+      }
+    }
+  }
+}
+
+{
+	"id": "ZmlsbXM6Mw=="
+}

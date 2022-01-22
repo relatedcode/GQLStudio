@@ -1,0 +1,12 @@
+https://snowtooth.moonhighway.com
+
+{
+}
+
+query GetLiftCount($status: LiftStatus) {
+  liftCount(status: $status)
+}
+
+{
+	"status": "OPEN"
+}

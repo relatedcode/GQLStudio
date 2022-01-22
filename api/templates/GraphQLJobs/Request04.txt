@@ -1,0 +1,46 @@
+https://api.graphql.jobs
+
+{
+}
+
+query GetRemoteJobs {
+  remotes {
+    id
+    name
+    slug
+    type
+    createdAt
+    updatedAt
+    jobs {
+      id
+      title
+      slug
+      description
+      applyUrl
+      isPublished
+      isFeatured
+      locationNames
+      userEmail
+      postedAt
+      createdAt
+      updatedAt
+      commitment {
+        id
+        title
+        slug
+        createdAt
+        updatedAt
+      }
+      tags {
+        id
+        name
+        slug
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+
+{
+}

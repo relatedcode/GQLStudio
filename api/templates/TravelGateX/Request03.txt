@@ -1,0 +1,57 @@
+https://api.travelgatex.com
+
+{
+  "Authorization": "Apikey [ENTER YOUR API SECRET HERE]"
+}
+
+query GetAdminClients {
+  admin {
+    clients(first: 10) {
+      edges {
+        node {
+          code
+          createdAt
+          updatedAt
+          clientData {
+            code
+            name
+            isActive
+            group {
+              code
+              createdAt
+              updatedAt
+            }
+            owner {
+              code
+              createdAt
+              updatedAt
+            }
+            suppliers {
+              edges {
+                cursor
+              }
+              pageInfo {
+                hasNextPage
+                hasPreviousPage
+                startCursor
+                endCursor
+              }
+              totalCount
+            }
+          }
+        }
+        cursor
+      }
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
+      totalCount
+    }
+  }
+}
+
+{
+}

@@ -1,0 +1,39 @@
+https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql
+
+{
+}
+
+query GetStopsByBbox($minLat: Float!, $minLon: Float!, $maxLat: Float!, $maxLon: Float!) {
+  stopsByBbox(minLat: $minLat, minLon: $minLon, maxLat: $maxLat, maxLon: $maxLon) {
+    id
+    gtfsId
+    name
+    lat
+    lon
+    code
+    desc
+    zoneId
+    url
+    locationType
+    wheelchairBoarding
+    direction
+    timezone
+    vehicleType
+    vehicleMode
+    platformCode
+    cluster {
+      id
+      gtfsId
+      name
+      lat
+      lon
+    }
+  }
+}
+
+{
+	"minLat": 60.225908,
+	"minLon": 24.37596,
+	"maxLat": 60.21541833333333,
+	"maxLon": 24.101405999999997
+}

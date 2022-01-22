@@ -1,0 +1,48 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+query GetOrganization($login: String!) {
+  organization(login: $login) {
+    avatarUrl
+    createdAt
+    databaseId
+    description
+    descriptionHTML
+    email
+    hasSponsorsListing
+    id
+    isSponsoringViewer
+    isVerified
+    location
+    login
+    name
+    newTeamResourcePath
+    newTeamUrl
+    organizationBillingEmail
+    pinnedItemsRemaining
+    projectsResourcePath
+    projectsUrl
+    resourcePath
+    teamsResourcePath
+    teamsUrl
+    twitterUsername
+    updatedAt
+    url
+    viewerCanAdminister
+    viewerCanChangePinnedItems
+    viewerCanCreateProjects
+    viewerCanCreateRepositories
+    viewerCanCreateTeams
+    viewerCanSponsor
+    viewerIsAMember
+    viewerIsSponsoring
+    websiteUrl
+  }
+}
+
+{
+  "login": "apple"
+}

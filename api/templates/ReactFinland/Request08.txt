@@ -1,0 +1,259 @@
+https://api.react-finland.fi/graphql
+
+{
+}
+
+query GetAllSeries {
+  allSeries {
+    id
+    name
+    conferences {
+      id
+      name
+      year
+      startDate
+      endDate
+      slogan
+      websiteUrl
+      organizer {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      locations {
+        name
+        about
+        city
+        address
+      }
+      organizers {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      mcs {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      partners {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      sponsors {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      goldSponsors {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      silverSponsors {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      bronzeSponsors {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      platformSponsors {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      schedules {
+        day
+        description
+      }
+      allSpeakers {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      speakers {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      keynoteSpeakers {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      fullTalkSpeakers {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      lightningTalkSpeakers {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      workshopInstructors {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      talks {
+        type
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      attendees {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      keynotes {
+        type
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      fullTalks {
+        type
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      lightningTalks {
+        type
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+  }
+}
+
+{
+}

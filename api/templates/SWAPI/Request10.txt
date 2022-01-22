@@ -1,0 +1,39 @@
+https://swapi-graph.netlify.app/graphql
+
+{
+}
+
+query GetAllVehicles($after: String, $first: Int, $before: String, $last: Int) {
+  allVehicles(after: $after, first: $first, before: $before, last: $last) {
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    vehicles {
+      name
+      model
+      vehicleClass
+      manufacturers
+      costInCredits
+      length
+      crew
+      passengers
+      maxAtmospheringSpeed
+      cargoCapacity
+      consumables
+      created
+      edited
+      id
+    }
+  }
+}
+
+{
+	"after": "",
+	"first": 10,
+	"before": "",
+	"last": 10
+}

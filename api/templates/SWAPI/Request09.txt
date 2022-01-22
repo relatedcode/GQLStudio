@@ -1,0 +1,39 @@
+https://swapi-graph.netlify.app/graphql
+
+{
+}
+
+query GetStarship($id: ID) {
+  starship(id: $id) {
+    name
+    model
+    starshipClass
+    manufacturers
+    costInCredits
+    length
+    crew
+    passengers
+    maxAtmospheringSpeed
+    hyperdriveRating
+    MGLT
+    cargoCapacity
+    consumables
+    created
+    edited
+    id
+    pilotConnection {
+      pilots {
+        id
+      }
+    }
+    filmConnection {
+      films {
+        id
+      }
+    }
+  }
+}
+
+{
+	"id": "c3RhcnNoaXBzOjM="
+}

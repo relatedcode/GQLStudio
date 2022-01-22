@@ -1,0 +1,35 @@
+https://swapi-graph.netlify.app/graphql
+
+{
+}
+
+query GetPlanet($id: ID) {
+  planet(id: $id) {
+    name
+    diameter
+    rotationPeriod
+    orbitalPeriod
+    gravity
+    population
+    climates
+    terrains
+    surfaceWater
+    created
+    edited
+    id
+    residentConnection {
+      residents {
+        id
+      }
+    }
+    filmConnection {
+      films {
+        id
+      }
+    }
+  }
+}
+
+{
+	"id": "cGxhbmV0czoy"
+}

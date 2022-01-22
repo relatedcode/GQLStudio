@@ -1,0 +1,24 @@
+https://swop.cx/graphql
+
+{
+  "Authorization": "ApiKey [ENTER YOUR API SECRET HERE]"
+}
+
+query GetHistorical($date: Date!, $baseCurrency: String, $quoteCurrencies: [String!]) {
+  historical(
+    date: $date
+    baseCurrency: $baseCurrency
+    quoteCurrencies: $quoteCurrencies
+  ) {
+    baseCurrency
+    quoteCurrency
+    quote
+    date
+  }
+}
+
+{
+	"date": "2021-06-19",
+	"baseCurrency": "EUR",
+	"quoteCurrencies": ["USD", "JPY", "CAD", "GBP"]
+}

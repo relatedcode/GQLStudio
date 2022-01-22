@@ -1,0 +1,35 @@
+https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql
+
+{
+}
+
+query GetStops {
+  stops(maxResults: 10) {
+    id
+    gtfsId
+    name
+    lat
+    lon
+    code
+    desc
+    zoneId
+    url
+    locationType
+    wheelchairBoarding
+    direction
+    timezone
+    vehicleType
+    vehicleMode
+    platformCode
+    cluster {
+      id
+      gtfsId
+      name
+      lat
+      lon
+    }
+  }
+}
+
+{
+}

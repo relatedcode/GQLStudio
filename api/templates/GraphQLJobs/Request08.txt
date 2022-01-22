@@ -1,0 +1,85 @@
+https://api.graphql.jobs
+
+{
+}
+
+query GetRemoteJob($input: LocationInput!) {
+  remote(input: $input) {
+    id
+    name
+    slug
+    type
+    createdAt
+    updatedAt
+    jobs {
+      id
+      title
+      slug
+      description
+      applyUrl
+      isPublished
+      isFeatured
+      locationNames
+      userEmail
+      postedAt
+      createdAt
+      updatedAt
+      commitment {
+        id
+        title
+        slug
+        createdAt
+        updatedAt
+      }
+      cities {
+        id
+        name
+        slug
+        type
+        createdAt
+        updatedAt
+      }
+      countries {
+        id
+        name
+        slug
+        type
+        isoCode
+        createdAt
+        updatedAt
+      }
+      remotes {
+        id
+        name
+        slug
+        type
+        createdAt
+        updatedAt
+      }
+      company {
+        id
+        name
+        slug
+        websiteUrl
+        logoUrl
+        twitter
+        emailed
+        createdAt
+        updatedAt
+      }
+      tags {
+        id
+        name
+        slug
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+
+{
+	"input": {
+		"slug": "remote"
+	}
+}

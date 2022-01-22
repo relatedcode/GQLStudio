@@ -1,0 +1,73 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+mutation CreateRepository($input: CreateRepositoryInput!) {
+  createRepository(input: $input) {
+    clientMutationId
+    repository {
+      createdAt
+      databaseId
+      deleteBranchOnMerge
+      description
+      descriptionHTML
+      diskUsage
+      forkCount
+      hasIssuesEnabled
+      hasProjectsEnabled
+      hasWikiEnabled
+      homepageUrl
+      id
+      isArchived
+      isBlankIssuesEnabled
+      isDisabled
+      isEmpty
+      isFork
+      isInOrganization
+      isLocked
+      isMirror
+      isPrivate
+      isSecurityPolicyEnabled
+      isTemplate
+      isUserConfigurationRepository
+      lockReason
+      mergeCommitAllowed
+      mirrorUrl
+      name
+      nameWithOwner
+      openGraphImageUrl
+      projectsResourcePath
+      projectsUrl
+      pushedAt
+      rebaseMergeAllowed
+      resourcePath
+      securityPolicyUrl
+      squashMergeAllowed
+      sshUrl
+      stargazerCount
+      tempCloneToken
+      updatedAt
+      url
+      usesCustomOpenGraphImage
+      viewerCanAdminister
+      viewerCanCreateProjects
+      viewerCanSubscribe
+      viewerCanUpdateTopics
+      viewerDefaultCommitEmail
+      viewerDefaultMergeMethod
+      viewerHasStarred
+      viewerPermission
+      viewerPossibleCommitEmails
+      viewerSubscription
+    }
+  }
+}
+
+{
+	"input": {
+		"name": "Test1",
+		"visibility": "PRIVATE"
+	}
+}

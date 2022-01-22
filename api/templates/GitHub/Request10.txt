@@ -1,0 +1,30 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+mutation ChangeUserStatus($input: ChangeUserStatusInput!) {
+  changeUserStatus(input: $input) {
+    clientMutationId
+    status {
+      createdAt
+      emoji
+      emojiHTML
+      expiresAt
+      id
+      indicatesLimitedAvailability
+      message
+      updatedAt
+    }
+  }
+}
+
+{
+	"input": {
+		"clientMutationId": "fTiTfSKvUxReMUpgvUUj",
+		"emoji": "😃",
+		"message": "Focusing",
+		"limitedAvailability": false
+	}
+}

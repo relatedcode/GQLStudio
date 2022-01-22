@@ -1,0 +1,12 @@
+https://snowtooth.moonhighway.com
+
+{
+}
+
+query GetTrailCount($status: TrailStatus) {
+  trailCount(status: $status)
+}
+
+{
+	"status": "OPEN"
+}

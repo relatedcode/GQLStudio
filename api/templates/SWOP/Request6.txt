@@ -1,0 +1,18 @@
+https://swop.cx/graphql
+
+{
+  "Authorization": "ApiKey [ENTER YOUR API SECRET HERE]"
+}
+
+query GetCurrencies {
+  currencies {
+    code
+    numericCode
+    decimalDigits
+    name
+    active
+  }
+}
+
+{
+}

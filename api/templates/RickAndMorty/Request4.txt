@@ -1,0 +1,28 @@
+https://rickandmortyapi.com/graphql
+
+{
+}
+
+query GetLocationFor($id: ID!) {
+  location(id: $id) {
+    id
+    name
+    type
+    dimension
+    created
+    residents {
+      id
+      name
+      status
+      species
+      type
+      gender
+      image
+      created
+    }
+  }
+}
+
+{
+	"id": 1
+}

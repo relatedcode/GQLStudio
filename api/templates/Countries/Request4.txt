@@ -1,0 +1,35 @@
+https://countries.trevorblades.com
+
+{
+}
+
+query GetCountry($code: ID!) {
+  country(code: $code) {
+    code
+    name
+    native
+    phone
+    capital
+    currency
+    emoji
+    emojiU
+    continent {
+      code
+      name
+    }
+    languages {
+      code
+      name
+      native
+      rtl
+    }
+    states {
+      code
+      name
+    }
+  }
+}
+
+{
+  "code": "US"
+}

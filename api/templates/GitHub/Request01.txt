@@ -1,0 +1,17 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+query CheckRateLimit {
+  rateLimit {
+    limit
+    cost
+    remaining
+    resetAt
+  }
+}
+
+{
+}

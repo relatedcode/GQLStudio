@@ -1,0 +1,25 @@
+https://api.catalysis-hub.org/graphql
+
+{
+}
+
+query GetInformation($first: Int, $after: String) {
+  information(first: $first, after: $after) {
+    totalCount
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    edges {
+      node {
+        name
+        value
+      }
+    }
+  }
+}
+
+{
+	"first": 10,
+	"after": ""
+}

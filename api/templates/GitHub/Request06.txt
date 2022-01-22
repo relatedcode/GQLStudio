@@ -1,0 +1,20 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+query GetCodesOfConductFor($key: String!) {
+  codeOfConduct(key: $key) {
+    id
+    key
+    name
+    resourcePath
+    url
+    body
+  }
+}
+
+{
+	"key": "contributor_covenant"
+}

@@ -1,0 +1,19 @@
+https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql
+
+{
+}
+
+query GetBikeParks {
+  bikeParks {
+    id
+    bikeParkId
+    name
+    spacesAvailable
+    realtime
+    lon
+    lat
+  }
+}
+
+{
+}

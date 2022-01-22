@@ -1,0 +1,74 @@
+https://api.travelgatex.com
+
+{
+  "Authorization": "Apikey [ENTER YOUR API SECRET HERE]"
+}
+
+query GetAlertsXAlerts {
+  alertsX {
+    alerts {
+      edges {
+        node {
+          code
+          createdAt
+          updatedAt
+          alertData {
+            code
+            name
+            description
+            isActive
+            configuration {
+              alertType
+              mode
+              windowType
+              periodicity
+              window
+              historicalWindow
+              offset
+              timesToAlert
+              timesToRecovery
+              noRecoveries
+              stateChangesOnly
+              minNumberRequests
+              percentageToAlert
+              variation
+              groupBy
+              comercialType
+            }
+            history {
+              totalCount
+            }
+            editor {
+              code
+              createdAt
+              updatedAt
+            }
+            events {
+              totalCount
+            }
+            group {
+              code
+              createdAt
+              updatedAt
+            }
+          }
+          adviseMessage {
+            code
+            description
+            level
+            correlationID
+            external {
+              code
+              message
+            }
+          }
+        }
+        cursor
+      }
+      totalCount
+    }
+  }
+}
+
+{
+}

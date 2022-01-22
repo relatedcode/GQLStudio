@@ -1,0 +1,36 @@
+https://snowtooth.moonhighway.com
+
+{
+}
+
+query Search($term: String, $status: LiftStatus) {
+  search(term: $term, status: $status) {
+    ... on Lift {
+      id
+      name
+      capacity
+      night
+      elevationGain
+      trailAccess {
+        id
+      }
+    }
+    ... on Trail {
+      id
+      name
+      status
+      difficulty
+      groomed
+      trees
+      night
+      accessedByLifts {
+        id
+      }
+    }
+  }
+}
+
+{
+	"term": "",
+	"status": "OPEN"
+}

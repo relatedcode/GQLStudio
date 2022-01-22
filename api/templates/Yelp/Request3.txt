@@ -1,0 +1,30 @@
+https://api.yelp.com/v3/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]",
+  "Accept-Language": "en-US"
+}
+
+query GetReviews($business: String, $locale: String, $limit: Int, $offset: Int) {
+  reviews(business: $business, locale: $locale, limit: $limit, offset: $offset) {
+    total
+    review {
+      id
+      rating
+      text
+      time_created
+      url
+      user {
+        id
+        profile_url
+        image_url
+        name
+      }
+    }
+  }
+}
+
+{
+	"business": "4KfQnlcSu4bbTqnvGdGptw",
+	"limit": 10,
+}

@@ -1,0 +1,17 @@
+https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql
+
+{
+}
+
+query GetTicketTypes {
+  ticketTypes {
+    id
+    fareId
+    price
+    currency
+    zones
+  }
+}
+
+{
+}

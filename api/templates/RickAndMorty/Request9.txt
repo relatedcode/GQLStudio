@@ -1,0 +1,49 @@
+https://rickandmortyapi.com/graphql
+
+{
+}
+
+query GetEpisodesByIds($ids: [ID!]!) {
+  episodesByIds(ids: $ids) {
+    id
+    name
+    air_date
+    episode
+    created
+    characters {
+      id
+      name
+      status
+      species
+      type
+      gender
+      image
+      created
+      origin {
+        id
+        name
+        type
+        dimension
+        created
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        created
+      }
+      episode {
+        id
+        name
+        air_date
+        episode
+        created
+      }
+    }
+  }
+}
+
+{
+	"ids": [1,2,3]
+}

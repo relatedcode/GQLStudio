@@ -1,0 +1,49 @@
+https://api.graphql.jobs
+
+{
+}
+
+query GetCompanieWiseJobs {
+  companies {
+    id
+    name
+    slug
+    websiteUrl
+    logoUrl
+    twitter
+    emailed
+    createdAt
+    updatedAt
+    jobs {
+      id
+      title
+      slug
+      description
+      applyUrl
+      isPublished
+      isFeatured
+      locationNames
+      userEmail
+      postedAt
+      createdAt
+      updatedAt
+      commitment {
+        id
+        title
+        slug
+        createdAt
+        updatedAt
+      }
+      tags {
+        id
+        name
+        slug
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+
+{
+}

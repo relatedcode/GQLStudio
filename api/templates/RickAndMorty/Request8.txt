@@ -1,0 +1,61 @@
+https://rickandmortyapi.com/graphql
+
+{
+}
+
+query GetEpisodes($page: Int, $filter: FilterEpisode) {
+  episodes(page: $page, filter: $filter) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      air_date
+      episode
+      created
+      characters {
+        id
+        name
+        status
+        species
+        type
+        gender
+        image
+        created
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+      }
+    }
+  }
+}
+
+{
+	"page": 1,
+	"filter": {
+		"name": "ai",
+		"episode": "S01"
+	}
+}

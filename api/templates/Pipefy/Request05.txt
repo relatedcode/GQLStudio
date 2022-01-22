@@ -1,0 +1,15 @@
+https://api.pipefy.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+query GetCurrentUserInfo {
+	me {
+		avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username
+		preferences { browserNativeNotificationEnabled displayImprovements displayOrganizationReportSidebar displayPipeReportsSidebar favoritePipeIds openNestedStartForm sidebarOpened suggestedTemplatesClosed useNewOpenCard }
+	}
+}
+
+{
+}

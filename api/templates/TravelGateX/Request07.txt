@@ -1,0 +1,210 @@
+https://api.travelgatex.com
+
+{
+  "Authorization": "Apikey [ENTER YOUR API SECRET HERE]"
+}
+
+query GetHotelXHotels($criteria: HotelXHotelListInput!, $relay: RelayInput!) {
+  hotelX {
+    hotels(criteria: $criteria, relay: $relay) {
+      edges {
+        node {
+          code
+          createdAt
+          updatedAt
+          hotelData {
+            code
+            hotelCode
+            hotelCodeSupplier
+            hotelName
+            categoryCode
+            chainCode
+            exclusiveDeal
+            rank
+            cardTypes
+            giataData {
+              id
+              source
+              href
+              updatedAt
+            }
+            property {
+              name
+              code
+            }
+            location {
+              address
+              city
+              zipCode
+              country
+              state
+              coordinates {
+                latitude
+                longitude
+              }
+              closestDestination {
+                code
+                available
+                destinationLeaf
+                closestDestinations
+                parent
+                type
+              }
+              airports {
+                code
+                createdAt
+                updatedAt
+              }
+              geoNames {
+                code
+                createdAt
+                updatedAt
+              }
+            }
+            contact {
+              email
+              telephone
+              fax
+              web
+            }
+            amenities {
+              code
+              type
+              texts {
+                text
+                language
+              }
+            }
+            medias {
+              code
+              order
+              type
+              updatedAt
+              url
+              texts {
+                text
+                language
+              }
+            }
+            descriptions {
+              type
+              texts {
+                text
+                language
+              }
+            }
+            rooms {
+              token
+              edges {
+                cursor
+              }
+              pageInfo {
+                hasNextPage
+                hasPreviousPage
+                startCursor
+                endCursor
+              }
+            }
+            propertyType {
+              propertyCode
+              name
+            }
+            mandatoryFees {
+              duration
+              mandatoryFeeCode
+              scope
+              name
+              text
+              included
+              price {
+                amount
+                currency
+              }
+            }
+            checkIn {
+              minAge
+              instructions {
+                text
+                language
+              }
+              specialInstructions {
+                text
+                language
+              }
+              schedule {
+                startTime
+                endTime
+              }
+            }
+            checkOut {
+              minAge
+              instructions {
+                text
+                language
+              }
+              specialInstructions {
+                text
+                language
+              }
+              schedule {
+                startTime
+                endTime
+              }
+            }
+            allAmenities {
+              edges {
+                cursor
+              }
+              pageInfo {
+                hasNextPage
+                hasPreviousPage
+                startCursor
+                endCursor
+              }
+            }
+          }
+          error {
+            code
+            type
+            description
+            level
+            correlationID
+            external {
+              code
+              message
+            }
+          }
+          adviseMessage {
+            code
+            type
+            description
+            level
+            correlationID
+            external {
+              code
+              message
+            }
+          }
+        }
+        cursor
+      }
+      count
+      token
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
+    }
+  }
+}
+
+{
+	"criteria": {
+		"access": 6305
+	},
+	"relay": {
+		"first": 10
+	}
+}

@@ -1,0 +1,56 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+mutation UnfollowUser($input: UnfollowUserInput!) {
+  unfollowUser(input: $input) {
+    clientMutationId
+    user {
+      anyPinnableItems
+      avatarUrl
+      bio
+      bioHTML
+      company
+      companyHTML
+      createdAt
+      databaseId
+      email
+      hasSponsorsListing
+      id
+      isBountyHunter
+      isCampusExpert
+      isDeveloperProgramMember
+      isEmployee
+      isGitHubStar
+      isHireable
+      isSiteAdmin
+      isSponsoringViewer
+      isViewer
+      location
+      login
+      name
+      pinnedItemsRemaining
+      projectsResourcePath
+      projectsUrl
+      resourcePath
+      twitterUsername
+      updatedAt
+      url
+      viewerCanChangePinnedItems
+      viewerCanCreateProjects
+      viewerCanFollow
+      viewerCanSponsor
+      viewerIsFollowing
+      viewerIsSponsoring
+      websiteUrl
+    }
+  }
+}
+
+{
+	"input": {
+		"userId": "MDQ6VXNlcjU0MjU3NjI="
+	}
+}

@@ -1,0 +1,29 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+query GetRepositories($name: String!, $numberOfRepo: Int!, $after: String) {
+  repositoryOwner(login: $name) {
+    repositories(first: $numberOfRepo, after: $after) {
+      totalCount
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+      nodes {
+        id
+        url
+        name
+        isPrivate
+        nameWithOwner
+      }
+    }
+  }
+}
+
+{
+	"name": "github",
+	"numberOfRepo": 20
+}

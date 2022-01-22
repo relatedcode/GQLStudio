@@ -1,0 +1,24 @@
+https://snowtooth.moonhighway.com
+
+{
+}
+
+mutation UpdateTrailStatus($id: ID!, $status: TrailStatus!) {
+  setTrailStatus(id: $id, status: $status) {
+    id
+    name
+    status
+    difficulty
+    groomed
+    trees
+    night
+    accessedByLifts {
+      id
+    }
+  }
+}
+
+{
+	"id": "blue-bird",
+	"status": "OPEN"
+}

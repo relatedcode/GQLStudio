@@ -1,0 +1,88 @@
+https://api.catalysis-hub.org/graphql
+
+{
+}
+
+query GetPublications($first: Int, $after: String) {
+  publications(first: $first, after: $after) {
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    edges {
+      node {
+        id
+        pubId
+        title
+        authors
+        journal
+        volume
+        number
+        pages
+        year
+        publisher
+        doi
+        tags
+        pubtextsearch
+        stime
+        Stime
+        systems {
+          id
+          uniqueId
+          ctime
+          mtime
+          username
+          numbers
+          positions
+          cell
+          pbc
+          initialMagmoms
+          initialCharges
+          masses
+          tags
+          momenta
+          constraints
+          calculator
+          calculatorParameters
+          energy
+          freeEnergy
+          forces
+          stress
+          dipole
+          magmoms
+          magmom
+          charges
+          keyValuePairs
+          data
+          natoms
+          fmax
+          smax
+          volume
+          mass
+          charge
+          Formula
+          Cifdata
+          Pbc
+          Ctime
+          Mtime
+          Adsorbate
+          Reaction
+          Username
+          Substrate
+          Facet
+          DftCode
+          DftFunctional
+          InputFile
+        }
+      }
+    }
+  }
+}
+
+{
+	"first": 10,
+	"after": ""
+}

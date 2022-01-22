@@ -1,0 +1,79 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+mutation CreateProject($input: CreateProjectInput!) {
+  createProject(input: $input) {
+    clientMutationId
+    project {
+      body
+      bodyHTML
+      closed
+      closedAt
+      createdAt
+      databaseId
+      id
+      name
+      number
+      creator {
+        avatarUrl
+        login
+        resourcePath
+        url
+      }
+      owner {
+        id
+        projectsResourcePath
+        projectsUrl
+        viewerCanCreateProjects
+        projects {
+          totalCount
+        }
+      }
+      pendingCards {
+        totalCount
+        pageInfo {
+          endCursor
+          hasNextPage
+          hasPreviousPage
+          startCursor
+        }
+        nodes {
+          databaseId
+          id
+          isArchived
+          note
+          resourcePath
+          state
+          updatedAt
+          url
+        }
+      }
+      progress {
+        doneCount
+        donePercentage
+        enabled
+        inProgressCount
+        inProgressPercentage
+        todoCount
+        todoPercentage
+      }
+      resourcePath
+      state
+      updatedAt
+      url
+      viewerCanUpdate
+    }
+  }
+}
+
+{
+	"input": {
+		"ownerId": "MDQ6VXNlcjgzMjc2NzY3",
+		"name": "Test",
+		"body": "",
+		"repositoryIds": []
+	}
+}

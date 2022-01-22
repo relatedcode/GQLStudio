@@ -1,0 +1,37 @@
+https://api.yelp.com/v3/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]",
+  "Accept-Language": "en-US"
+}
+
+query GetEvent($id: String) {
+  event(id: $id) {
+    name
+    id
+    business_id
+    attending_count
+    category
+    cost
+    cost_max
+    description
+    event_site_url
+    image_url
+    interested_count
+    is_canceled
+    is_free
+    is_official
+    latitude
+    longitude
+    tickets_url
+    time_end
+    time_start
+    business {
+      id
+    }
+  }
+}
+
+{
+	"id": "new-york-yelps-51-things-to-do-in-2016"
+}

@@ -1,0 +1,165 @@
+https://api.react-finland.fi/graphql
+
+{
+}
+
+query GetLocations {
+  locations {
+    firstName
+    lastName
+    name
+    about
+    aboutShort
+    company
+    type
+    keywords
+    noPhotography
+    image {
+      url
+      title
+      style {
+        backgroundSize
+      }
+    }
+    social {
+      homepage
+      twitter
+      github
+      facebook
+      googleMaps
+      medium
+      instagram
+      linkedin
+      youtube
+      vk
+      pinterest
+      vimeo
+      dribble
+      devto
+      twitch
+    }
+    talks {
+      type
+      level
+      title
+      hasTitle
+      description
+      keywords
+      day
+      begin
+      end
+      location {
+        name
+        about
+        city
+        address
+      }
+      people {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      urls {
+        web
+        slides
+        video
+      }
+      sessions {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      parent {
+        begin
+        end
+        title
+      }
+      speakers {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+    }
+    workshops {
+      type
+      level
+      title
+      hasTitle
+      description
+      keywords
+      day
+      begin
+      end
+      location {
+        name
+        about
+        city
+        address
+      }
+      people {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+      urls {
+        web
+        slides
+        video
+      }
+      sessions {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      parent {
+        begin
+        end
+        title
+      }
+      speakers {
+        firstName
+        lastName
+        name
+        about
+        aboutShort
+        company
+        type
+        keywords
+        noPhotography
+      }
+    }
+  }
+}
+
+{
+}

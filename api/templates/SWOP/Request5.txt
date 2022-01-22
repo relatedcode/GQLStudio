@@ -1,0 +1,27 @@
+https://swop.cx/graphql
+
+{
+  "Authorization": "ApiKey [ENTER YOUR API SECRET HERE]"
+}
+
+query Convert($amount: BigDecimal!, $baseCurrency: String!, $quoteCurrencies: [String!], $date: Date) {
+  convert(
+    amount: $amount
+    baseCurrency: $baseCurrency
+    quoteCurrencies: $quoteCurrencies
+    date: $date
+  ) {
+    baseCurrency
+    quoteCurrency
+    baseAmount
+    quoteAmount
+    date
+  }
+}
+
+{
+  "amount": 10.00,
+  "baseCurrency": "EUR",
+  "quoteCurrencies": ["USD", "JPY", "CAD", "GBP"],
+  "date": "2021-06-01"
+}

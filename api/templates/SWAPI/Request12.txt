@@ -1,0 +1,37 @@
+https://swapi-graph.netlify.app/graphql
+
+{
+}
+
+query GetNodeDetailsFrom($id: ID!) {
+  node(id: $id) {
+    ... on Film {
+      id
+      edited
+    }
+    ... on Person {
+      id
+      edited
+    }
+    ... on Planet {
+      id
+      edited
+    }
+    ... on Species {
+      id
+      edited
+    }
+    ... on Starship {
+      id
+      edited
+    }
+    ... on Vehicle {
+      id
+      edited
+    }
+  }
+}
+
+{
+	"id": "dmVoaWNsZXM6NA=="
+}

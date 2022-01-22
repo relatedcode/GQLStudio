@@ -1,0 +1,48 @@
+https://api.travelgatex.com
+
+{
+  "Authorization": "Apikey [ENTER YOUR API SECRET HERE]"
+}
+
+query GetHotelXBoards($criteria: HotelXBoardQueryInput!, $relay: RelayInput!) {
+  hotelX {
+    boards(criteria: $criteria, relay: $relay) {
+      edges {
+        node {
+          code
+          createdAt
+          updatedAt
+          boardData {
+            code
+            boardCode
+            texts {
+              text
+              language
+            }
+          }
+          error {
+            code
+            type
+            description
+          }
+        }
+        cursor
+      }
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
+    }
+  }
+}
+
+{
+	"criteria": {
+		"access": 5523
+	},
+	"relay": {
+		"first": 10
+	}
+}

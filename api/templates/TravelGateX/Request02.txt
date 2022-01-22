@@ -1,0 +1,99 @@
+https://api.travelgatex.com
+
+{
+  "Authorization": "Apikey [ENTER YOUR API SECRET HERE]"
+}
+
+query GetAdminSuppliers {
+  admin {
+    suppliers(first: 10) {
+      edges {
+        node {
+          code
+          createdAt
+          updatedAt
+          supplierData {
+            code
+            name
+            isActive
+            context
+            serviceApi
+            supplierGroup
+            provider {
+              code
+              name
+              isActive
+              isPublic
+            }
+            accesses {
+              edges {
+                cursor
+              }
+              pageInfo {
+                hasNextPage
+                hasPreviousPage
+                startCursor
+                endCursor
+              }
+              totalCount
+            }
+            owner {
+              code
+              createdAt
+              updatedAt
+            }
+            groups {
+              edges {
+                cursor
+              }
+              pageInfo {
+                hasNextPage
+                hasPreviousPage
+                startCursor
+                endCursor
+              }
+            }
+            clients {
+              edges {
+                cursor
+              }
+              pageInfo {
+                hasNextPage
+                hasPreviousPage
+                startCursor
+                endCursor
+              }
+              totalCount
+            }
+            system {
+              code
+              createdAt
+              updatedAt
+              systemData {
+                code
+                name
+                isActive
+              }
+              error {
+                code
+                type
+                description
+              }
+            }
+          }
+        }
+        cursor
+      }
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
+      totalCount
+    }
+  }
+}
+
+{
+}

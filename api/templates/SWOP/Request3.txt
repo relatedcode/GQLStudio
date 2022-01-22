@@ -1,0 +1,28 @@
+https://swop.cx/graphql
+
+{
+  "Authorization": "ApiKey [ENTER YOUR API SECRET HERE]"
+}
+
+query TimeSeries($dateFrom: Date!, $dateTo: Date!, $baseCurrency: String, $quoteCurrencies: [String!]) {
+  timeSeries(
+    dateFrom: $dateFrom
+    dateTo: $dateTo
+    baseCurrency: $baseCurrency
+    quoteCurrencies: $quoteCurrencies
+  ) {
+    baseCurrency
+    quoteCurrency
+    quotes {
+      quote
+      date
+    }
+  }
+}
+
+{
+	"dateFrom": "2021-06-01",
+	"dateTo": "2021-06-15",
+	"baseCurrency": "EUR",
+	"quoteCurrencies": ["USD", "JPY", "CAD", "GBP"]
+}

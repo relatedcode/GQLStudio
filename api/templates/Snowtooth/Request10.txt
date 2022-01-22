@@ -1,0 +1,18 @@
+wss://snowtooth.moonhighway.com/graphql
+
+{
+}
+
+subscription LiftStatusChange {
+  liftStatusChange {
+    id
+    name
+    status
+    capacity
+    night
+    elevationGain
+  }
+}
+
+{
+}

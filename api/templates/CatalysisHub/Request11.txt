@@ -1,0 +1,148 @@
+https://api.catalysis-hub.org/graphql
+
+{
+}
+
+query GetNode($id: ID!) {
+  node(id: $id) {
+    __typename
+    ... on Information {
+      id
+    }
+    ... on System {
+      id
+      uniqueId
+      ctime
+      mtime
+      username
+      numbers
+      positions
+      cell
+      pbc
+      initialMagmoms
+      initialCharges
+      masses
+      momenta
+      constraints
+      calculator
+      calculatorParameters
+      energy
+      freeEnergy
+      forces
+      stress
+      dipole
+      magmoms
+      magmom
+      charges
+      keyValuePairs
+      data
+      natoms
+      fmax
+      smax
+      mass
+      charge
+      Formula
+      Cifdata
+      Pbc
+      Ctime
+      Mtime
+      Adsorbate
+      Reaction
+      Username
+      Substrate
+      Facet
+      DftCode
+      DftFunctional
+      InputFile
+    }
+    ... on Key {
+      id
+      key
+      systems {
+        id
+      }
+    }
+    ... on Species {
+      id
+      z
+      n
+      systems {
+        id
+      }
+    }
+    ... on TextKeyValue {
+      id
+      key
+      systems {
+        id
+      }
+    }
+    ... on NumberKeyValue {
+      id
+      key
+      value
+      systems {
+        id
+      }
+    }
+    ... on ReactionSystem {
+      id
+      name
+      energyCorrection
+      aseId
+      reactions {
+        id
+      }
+      systems {
+        id
+      }
+    }
+    ... on Reaction {
+      id
+      chemicalComposition
+      surfaceComposition
+      facet
+      sites
+      coverages
+      reactants
+      products
+      reactionEnergy
+      activationEnergy
+      dftCode
+      dftFunctional
+      username
+      pubId
+      textsearch
+      Equation
+    }
+    ... on Publication {
+      id
+      pubId
+      title
+      authors
+      journal
+      volume
+      number
+      pages
+      year
+      publisher
+      doi
+      tags
+      pubtextsearch
+      stime
+      Stime
+    }
+    ... on Log {
+      aseId
+      logfile
+      Logtext
+      systems {
+        id
+      }
+    }
+  }
+}
+
+{
+	"id": "U3lzdGVtOjM1NTQ5Nw=="
+}

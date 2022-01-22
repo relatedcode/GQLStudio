@@ -1,0 +1,46 @@
+https://api.yelp.com/v3/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]",
+  "Accept-Language": "en-US"
+}
+
+query GetCategories($alias: String) {
+  categories(alias: $alias) {
+    total
+    category {
+      title
+      alias
+      parent_categories {
+        title
+        alias
+        parent_categories {
+          title
+          alias
+        }
+        country_whitelist {
+          code
+        }
+        country_blacklist {
+          code
+        }
+      }
+      country_whitelist {
+        code
+        locales {
+          code
+        }
+      }
+      country_blacklist {
+        code
+        locales {
+          code
+        }
+      }
+    }
+  }
+}
+
+{
+	"alias": "italian"
+}

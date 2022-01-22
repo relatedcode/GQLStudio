@@ -1,0 +1,151 @@
+https://api.travelgatex.com
+
+{
+  "Authorization": "Apikey [ENTER YOUR API SECRET HERE]"
+}
+
+query GetAdminAccesses {
+  admin {
+    accesses(first: 10) {
+      edges {
+        node {
+          code
+          createdAt
+          updatedAt
+          accessData {
+            name
+            isActive
+            code
+            isTest
+            user
+            password
+            markets
+            rateRules
+            updateDescriptiveInfo
+            descriptiveInfoLimit
+            isSchedulerActive
+            updateList
+            updateDateRange
+            supplier {
+              code
+              createdAt
+              updatedAt
+              supplierData {
+                code
+                name
+                isActive
+                context
+                serviceApi
+                supplierGroup
+              }
+              error {
+                code
+                type
+                description
+              }
+            }
+            urls {
+              search
+              quote
+              book
+              generic
+            }
+            parameters {
+              key
+              value
+            }
+            shared {
+              code
+              createdAt
+              updatedAt
+              accessData {
+                name
+                isActive
+                code
+                isTest
+                user
+                password
+                markets
+                rateRules
+                updateDescriptiveInfo
+                descriptiveInfoLimit
+                isSchedulerActive
+                updateList
+                updateDateRange
+              }
+              error {
+                code
+                type
+                description
+              }
+            }
+            owner {
+              code
+              createdAt
+              updatedAt
+            }
+            groups {
+              edges {
+                cursor
+              }
+              pageInfo {
+                hasNextPage
+                hasPreviousPage
+                startCursor
+                endCursor
+              }
+            }
+            legacyLink {
+              hubUser {
+                code
+                createdAt
+                updatedAt
+              }
+              hubProvider {
+                code
+                createdAt
+                updatedAt
+              }
+            }
+            master {
+              code
+              createdAt
+              updatedAt
+              accessData {
+                name
+                isActive
+                code
+                isTest
+                user
+                password
+                markets
+                rateRules
+                updateDescriptiveInfo
+                descriptiveInfoLimit
+                isSchedulerActive
+                updateList
+                updateDateRange
+              }
+              error {
+                code
+                type
+                description
+              }
+            }
+          }
+        }
+        cursor
+      }
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
+      totalCount
+    }
+  }
+}
+
+{
+}

@@ -1,0 +1,22 @@
+https://snowtooth.moonhighway.com
+
+{
+}
+
+query GetAllLifts($status: LiftStatus) {
+  allLifts(status: $status) {
+    id
+    name
+    status
+    capacity
+    night
+    elevationGain
+    trailAccess {
+      id
+    }
+  }
+}
+
+{
+	"status": "HOLD"
+}

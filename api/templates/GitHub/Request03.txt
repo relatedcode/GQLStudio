@@ -1,0 +1,68 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+query GetRepository($owner: String!, $name: String!) {
+  repository(owner: $owner, name: $name) {
+    createdAt
+    databaseId
+    deleteBranchOnMerge
+    description
+    descriptionHTML
+    diskUsage
+    forkCount
+    hasIssuesEnabled
+    hasProjectsEnabled
+    hasWikiEnabled
+    homepageUrl
+    id
+    isArchived
+    isBlankIssuesEnabled
+    isDisabled
+    isEmpty
+    isFork
+    isInOrganization
+    isLocked
+    isMirror
+    isPrivate
+    isSecurityPolicyEnabled
+    isTemplate
+    isUserConfigurationRepository
+    lockReason
+    mergeCommitAllowed
+    mirrorUrl
+    name
+    nameWithOwner
+    openGraphImageUrl
+    projectsResourcePath
+    projectsUrl
+    pushedAt
+    rebaseMergeAllowed
+    resourcePath
+    securityPolicyUrl
+    squashMergeAllowed
+    sshUrl
+    stargazerCount
+    tempCloneToken
+    updatedAt
+    url
+    usesCustomOpenGraphImage
+    viewerCanAdminister
+    viewerCanCreateProjects
+    viewerCanSubscribe
+    viewerCanUpdateTopics
+    viewerDefaultCommitEmail
+    viewerDefaultMergeMethod
+    viewerHasStarred
+    viewerPermission
+    viewerPossibleCommitEmails
+    viewerSubscription
+  }
+}
+
+{
+  "owner": "apple",
+  "name": "swift"
+}

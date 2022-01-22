@@ -1,0 +1,20 @@
+https://snowtooth.moonhighway.com
+
+{
+}
+
+query GetTrailFor($id: ID!) {
+  Trail(id: $id) {
+    id
+    name
+    status
+    difficulty
+    groomed
+    trees
+    night
+  }
+}
+
+{
+	"id": "blue-bird"
+}

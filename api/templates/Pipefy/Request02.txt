@@ -1,0 +1,134 @@
+https://api.pipefy.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+query GetCardFrom($cardID: ID!) {
+	card(id: $cardID) {
+		age attachments_count checklist_items_checked_count checklist_items_count comments_count createdAt created_at creatorEmail current_phase_age done due_date emailMessagingAddress expired finished_at id inboxEmailsRead late path started_current_phase_at suid title updated_at url uuid
+		assignees {
+			avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username
+			preferences { browserNativeNotificationEnabled displayImprovements displayOrganizationReportSidebar displayPipeReportsSidebar favoritePipeIds openNestedStartForm sidebarOpened suggestedTemplatesClosed useNewOpenCard }
+		}
+		attachments {
+			createdAt path url
+			createdBy { avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username }
+			field { description help id index index_name internal_id label options type uuid }
+			phase { cards_count color created_at description done expiredCardsCount id index isDraft lateCardsCount name sequentialId }
+		}
+		cardAssignees { assignedAt id }
+		child_relations {
+			cards { age attachments_count checklist_items_checked_count checklist_items_count comments_count createdAt created_at creatorEmail current_phase_age done due_date emailMessagingAddress expired finished_at id inboxEmailsRead late path started_current_phase_at suid title updated_at url uuid }
+			id name source_type
+			pipe { anyone_can_create_card cards_count clone_from_id color conditionExpressionsFieldIds create_card_label created_at description emailAddress expiration_time_by_unit expiration_unit icon id last_updated_by_card name only_admin_can_remove_cards only_assignees_can_edit_cards opened_cards_count organizationId public public_form public_form_active role suid users_count uuid }
+		}
+		comments {
+			author_name created_at id text
+			author { avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username }
+		}
+		createdBy {
+			avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username
+			preferences { browserNativeNotificationEnabled displayImprovements displayOrganizationReportSidebar displayPipeReportsSidebar favoritePipeIds openNestedStartForm sidebarOpened suggestedTemplatesClosed useNewOpenCard }
+		}
+		created_by {
+			avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username
+			preferences { browserNativeNotificationEnabled displayImprovements displayOrganizationReportSidebar displayPipeReportsSidebar favoritePipeIds openNestedStartForm sidebarOpened suggestedTemplatesClosed useNewOpenCard }
+		}
+		currentLateness { becameLateAt id shouldBecomeLateAt sla }
+		current_phase {
+			cards {
+				edges {
+					cursor
+					node {
+						age attachments_count checklist_items_checked_count checklist_items_count comments_count createdAt created_at creatorEmail current_phase_age done due_date emailMessagingAddress expired finished_at id inboxEmailsRead late path started_current_phase_at suid title updated_at url uuid
+						assignees { avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username }
+						attachments { createdAt path url }
+						cardAssignees { assignedAt id }
+						child_relations { id name source_type }
+						comments { author_name created_at id text }
+						createdBy { avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username }
+						created_by { avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username }
+						currentLateness { becameLateAt id shouldBecomeLateAt sla }
+						current_phase { cards_count color created_at description done expiredCardsCount id index isDraft lateCardsCount name sequentialId }
+						expiration { expiredAt shouldExpireAt }
+						fields { array_value date_value datetime_value filled_at float_value indexName name report_value updated_at value }
+						inbox_emails { bcc body cc clean_body clean_html clean_text from fromName from_name id main_to message_id raw_body raw_headers raw_html raw_text sent_via_automation state subject to updated_at }
+						labels { color id name }
+						parent_relations { id name source_type }
+						phases_history { became_late created_at draft duration firstTimeIn lastTimeIn lastTimeOut }
+						pipe { anyone_can_create_card cards_count clone_from_id color conditionExpressionsFieldIds create_card_label created_at description emailAddress expiration_time_by_unit expiration_unit icon id last_updated_by_card name only_admin_can_remove_cards only_assignees_can_edit_cards opened_cards_count organizationId public public_form public_form_active role suid users_count uuid }
+						subtitles { array_value date_value datetime_value filled_at float_value indexName name report_value updated_at value }
+						summary { title type value }
+						summary_attributes { title type value }
+						summary_fields { title type value }
+					}
+				}
+				pageInfo { endCursor hasNextPage hasPreviousPage startCursor }
+			}
+			cards_can_be_moved_to_phases { cards_count color created_at description done expiredCardsCount id index isDraft lateCardsCount name sequentialId }
+			cards_count color created_at description done expiredCardsCount id index isDraft lateCardsCount name sequentialId
+			fieldConditions { id name }
+			fields { allChildrenMustBeDoneToFinishParent allChildrenMustBeDoneToMoveParent canConnectExisting canConnectMultiples canCreateNewConnected childMustExistToFinishParent custom_validation description editable help id index index_name internal_id is_multiple label minimal_view options required synced_with_card type uuid }
+		}
+		expiration { expiredAt shouldExpireAt }
+		fields {
+			array_value date_value datetime_value filled_at float_value indexName name report_value updated_at value
+			assignee_values { avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username }
+			field { description help id index index_name internal_id label options type uuid }
+			label_values { color id name }
+			phase_field { allChildrenMustBeDoneToFinishParent allChildrenMustBeDoneToMoveParent canConnectExisting canConnectMultiples canCreateNewConnected childMustExistToFinishParent custom_validation description editable help id index index_name internal_id is_multiple label minimal_view options required synced_with_card type uuid }
+		}
+		inbox_emails {
+			attachments { fileUrl filename id public_url }
+			bcc body cc clean_body clean_html clean_text from fromName from_name id main_to message_id raw_body raw_headers raw_html raw_text sent_via_automation state subject to updated_at
+			card { age attachments_count checklist_items_checked_count checklist_items_count comments_count createdAt created_at creatorEmail current_phase_age done due_date emailMessagingAddress expired finished_at id inboxEmailsRead late path started_current_phase_at suid title updated_at url uuid }
+			pipe { anyone_can_create_card cards_count clone_from_id color conditionExpressionsFieldIds create_card_label created_at description emailAddress expiration_time_by_unit expiration_unit icon id last_updated_by_card name only_admin_can_remove_cards only_assignees_can_edit_cards opened_cards_count organizationId public public_form public_form_active role suid users_count uuid }
+			user { avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username }
+		}
+		labels { color id name }
+		parent_relations {
+			cards { age attachments_count checklist_items_checked_count checklist_items_count comments_count createdAt created_at creatorEmail current_phase_age done due_date emailMessagingAddress expired finished_at id inboxEmailsRead late path started_current_phase_at suid title updated_at url uuid }
+			id name source_type
+			pipe { anyone_can_create_card clone_from_id color conditionExpressionsFieldIds create_card_label created_at description emailAddress expiration_time_by_unit expiration_unit icon id last_updated_by_card name only_admin_can_remove_cards only_assignees_can_edit_cards opened_cards_count organizationId public public_form public_form_active role suid users_count uuid }
+		}
+		phases_history {
+			became_late created_at draft duration firstTimeIn lastTimeIn lastTimeOut
+			phase { cards_count color created_at description done expiredCardsCount id index isDraft lateCardsCount name sequentialId }
+		}
+		pipe {
+			anyone_can_create_card cards_count clone_from_id color conditionExpressionsFieldIds create_card_label created_at description emailAddress expiration_time_by_unit expiration_unit icon id last_updated_by_card name only_admin_can_remove_cards only_assignees_can_edit_cards opened_cards_count organizationId public public_form public_form_active role suid users_count uuid
+			childrenRelations { allChildrenMustBeDoneToFinishParent allChildrenMustBeDoneToMoveParent autoFillFieldEnabled canConnectExistingItems canConnectMultipleItems canCreateNewItems childMustExistToFinishParent childMustExistToMoveParent id name }
+			fieldConditions { id name }
+			improvementSetting { description id title }
+			labels { color id name }
+			members { role_name }
+			organization { created_at custom_logo_url id name only_admin_can_create_pipes only_admin_can_invite_users role users_count uuid }
+			parentsRelations { allChildrenMustBeDoneToFinishParent allChildrenMustBeDoneToMoveParent autoFillFieldEnabled canConnectExistingItems canConnectMultipleItems canCreateNewItems childMustExistToFinishParent childMustExistToMoveParent id name }
+			phases { cards_count color created_at description done expiredCardsCount id index isDraft lateCardsCount name sequentialId }
+			preferences { hiddenStartFormAttributes hiddenTopButtons inboxEmailEnabled mainTabViews startFormTitle }
+			publicFormSettings { afterSubmitMessage backgroundColor backgroundImage brandColor canHidePipefyLogo description displayPipefyLogo logo organizationName public_url reuseLastSubmissionResponse showSubmitAnotherResponseButton submitButtonText submitterEmailCollectionEnabled submitterEmailCollectionMethod title }
+			startFormFieldConditions { id name }
+			start_form_fields { allChildrenMustBeDoneToFinishParent allChildrenMustBeDoneToMoveParent canConnectExisting canConnectMultiples canCreateNewConnected childMustExistToFinishParent custom_validation description editable help id index index_name internal_id is_multiple label minimal_view options required synced_with_card type uuid }
+			summary_attributes { id }
+			summary_options { name }
+			title_field { allChildrenMustBeDoneToFinishParent allChildrenMustBeDoneToMoveParent canConnectExisting canConnectMultiples canCreateNewConnected childMustExistToFinishParent custom_validation description editable help id index index_name internal_id is_multiple label minimal_view options required synced_with_card type uuid }
+			users { avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username }
+			webhooks { actions email headers id name url }
+		}
+		subtitles {
+			array_value date_value datetime_value filled_at float_value indexName name report_value updated_at value
+			assignee_values { avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username }
+			field { description help id index index_name internal_id label options type uuid }
+			label_values { color id name }
+			phase_field { allChildrenMustBeDoneToFinishParent allChildrenMustBeDoneToMoveParent canConnectExisting canConnectMultiples canCreateNewConnected childMustExistToFinishParent custom_validation description editable help id index index_name internal_id is_multiple label minimal_view options required synced_with_card type uuid }
+		}
+		summary { title type value }
+		summary_attributes { title type value }
+		summary_fields { title type value }
+	}
+}
+
+{
+	"cardID": 433709486
+}

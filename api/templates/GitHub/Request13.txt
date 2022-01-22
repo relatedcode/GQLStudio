@@ -1,0 +1,23 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+mutation DeleteProject($input: DeleteProjectInput!) {
+  deleteProject(input: $input) {
+    clientMutationId
+    owner {
+      id
+      projectsResourcePath
+      projectsUrl
+      viewerCanCreateProjects
+    }
+  }
+}
+
+{
+	"input": {
+		"projectId": "MDc6UHJvamVjdDEyNzA3ODY0"
+	}
+}

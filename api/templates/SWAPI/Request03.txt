@@ -1,0 +1,39 @@
+https://swapi-graph.netlify.app/graphql
+
+{
+}
+
+query GetPerson($id: ID) {
+  person(id: $id) {
+    id
+    created
+    edited
+    name
+    birthYear
+    eyeColor
+    gender
+    hairColor
+    height
+    mass
+    skinColor
+    filmConnection {
+      films {
+        id
+      }
+    }
+    starshipConnection {
+      starships {
+        id
+      }
+    }
+    vehicleConnection {
+      vehicles {
+        id
+      }
+    }
+  }
+}
+
+{
+	"id": "cGVvcGxlOjE="
+}

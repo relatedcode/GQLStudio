@@ -1,0 +1,37 @@
+https://swapi-graph.netlify.app/graphql
+
+{
+}
+
+query GetAllPlanets($after: String, $first: Int, $before: String, $last: Int) {
+  allPlanets(after: $after, first: $first, before: $before, last: $last) {
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    planets {
+      name
+      diameter
+      rotationPeriod
+      orbitalPeriod
+      gravity
+      population
+      climates
+      terrains
+      surfaceWater
+      created
+      edited
+      id
+    }
+  }
+}
+
+{
+	"after": "",
+	"first": 10,
+	"before": "",
+	"last": 10
+}

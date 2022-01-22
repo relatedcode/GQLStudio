@@ -1,0 +1,79 @@
+https://api.react-finland.fi/graphql
+
+{
+}
+
+query GetConferencesOrganizer {
+  conferences {
+    id
+    name
+    year
+    startDate
+    endDate
+    slogan
+    websiteUrl
+    organizer {
+      firstName
+      lastName
+      name
+      about
+      aboutShort
+      company
+      type
+      keywords
+      noPhotography
+      image {
+        url
+        title
+      }
+      social {
+        homepage
+        twitter
+        github
+        facebook
+        googleMaps
+        medium
+        instagram
+        linkedin
+        youtube
+        vk
+        pinterest
+        vimeo
+        dribble
+        devto
+        twitch
+      }
+      location {
+        name
+        about
+        city
+        address
+      }
+      talks {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+      workshops {
+        type
+        level
+        title
+        hasTitle
+        description
+        keywords
+        day
+        begin
+        end
+      }
+    }
+  }
+}
+
+{
+}

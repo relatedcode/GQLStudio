@@ -1,0 +1,197 @@
+https://api.catalysis-hub.org/graphql
+
+{
+}
+
+query GetReactions($first: Int, $after: String) {
+  reactions(first: $first, after: $after) {
+    totalCount
+    edges {
+      node {
+        id
+        chemicalComposition
+        surfaceComposition
+        facet
+        sites
+        coverages
+        reactants
+        products
+        reactionEnergy
+        activationEnergy
+        dftCode
+        dftFunctional
+        username
+        pubId
+        textsearch
+        Equation
+        reactionSystems {
+          name
+          energyCorrection
+          aseId
+          id
+        }
+        systems {
+          id
+          uniqueId
+          ctime
+          mtime
+          username
+          numbers
+          positions
+          cell
+          pbc
+          initialMagmoms
+          initialCharges
+          masses
+          tags
+          momenta
+          constraints
+          calculator
+          calculatorParameters
+          energy
+          freeEnergy
+          forces
+          stress
+          dipole
+          magmoms
+          magmom
+          charges
+          keyValuePairs
+          data
+          natoms
+          fmax
+          smax
+          volume
+          mass
+          charge
+          Formula
+          Cifdata
+          Trajdata
+          Pbc
+          Ctime
+          Mtime
+          Adsorbate
+          Reaction
+          Username
+          Substrate
+          Facet
+          DftCode
+          DftFunctional
+          InputFile
+          log {
+            aseId
+            logfile
+            Logtext
+            id
+          }
+          publication {
+            id
+            pubId
+            title
+            authors
+            journal
+            volume
+            number
+            pages
+            year
+            publisher
+            doi
+            tags
+            pubtextsearch
+            stime
+            Stime
+          }
+        }
+        publication {
+          id
+          pubId
+          title
+          authors
+          journal
+          volume
+          number
+          pages
+          year
+          publisher
+          doi
+          tags
+          pubtextsearch
+          stime
+          Stime
+          reactions {
+            id
+            chemicalComposition
+            surfaceComposition
+            facet
+            sites
+            coverages
+            reactants
+            products
+            reactionEnergy
+            activationEnergy
+            dftCode
+            dftFunctional
+            username
+            pubId
+            textsearch
+            Equation
+          }
+          systems {
+            id
+            uniqueId
+            ctime
+            mtime
+            username
+            numbers
+            positions
+            cell
+            pbc
+            initialMagmoms
+            initialCharges
+            masses
+            tags
+            momenta
+            constraints
+            calculator
+            calculatorParameters
+            energy
+            freeEnergy
+            forces
+            stress
+            dipole
+            magmoms
+            magmom
+            charges
+            keyValuePairs
+            data
+            natoms
+            fmax
+            smax
+            volume
+            mass
+            charge
+            Formula
+            Cifdata
+            Trajdata
+            Pbc
+            Ctime
+            Mtime
+            Adsorbate
+            Reaction
+            Username
+            Substrate
+            Facet
+            DftCode
+            DftFunctional
+            InputFile
+          }
+        }
+      }
+    }
+  }
+}
+
+{
+	"first": 10,
+	"after": ""
+}

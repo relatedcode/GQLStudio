@@ -1,0 +1,41 @@
+https://swapi-graph.netlify.app/graphql
+
+{
+}
+
+query GetAllStarships($after: String, $first: Int, $before: String, $last: Int) {
+  allStarships(after: $after, first: $first, before: $before, last: $last) {
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    starships {
+      name
+      model
+      starshipClass
+      manufacturers
+      costInCredits
+      length
+      crew
+      passengers
+      maxAtmospheringSpeed
+      hyperdriveRating
+      MGLT
+      cargoCapacity
+      consumables
+      created
+      edited
+      id
+    }
+  }
+}
+
+{
+	"after": "",
+	"first": 10,
+	"before": "",
+	"last": 10
+}

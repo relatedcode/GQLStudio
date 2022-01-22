@@ -1,0 +1,51 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+query GetUser($login: String!) {
+  user(login: $login) {
+    anyPinnableItems
+    avatarUrl
+    bio
+    bioHTML
+    company
+    companyHTML
+    createdAt
+    databaseId
+    email
+    hasSponsorsListing
+    id
+    isBountyHunter
+    isCampusExpert
+    isDeveloperProgramMember
+    isEmployee
+    isGitHubStar
+    isHireable
+    isSiteAdmin
+    isSponsoringViewer
+    isViewer
+    location
+    login
+    name
+    pinnedItemsRemaining
+    projectsResourcePath
+    projectsUrl
+    resourcePath
+    twitterUsername
+    updatedAt
+    url
+    viewerCanChangePinnedItems
+    viewerCanCreateProjects
+    viewerCanFollow
+    viewerCanSponsor
+    viewerIsFollowing
+    viewerIsSponsoring
+    websiteUrl
+  }
+}
+
+{
+  "login": "relatedcode"
+}

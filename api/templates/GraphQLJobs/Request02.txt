@@ -1,0 +1,55 @@
+https://api.graphql.jobs
+
+{
+}
+
+query GetJobFromCities {
+  cities {
+    id
+    name
+    slug
+    type
+    createdAt
+    updatedAt
+    country {
+      id
+      name
+      slug
+      type
+      isoCode
+      createdAt
+      updatedAt
+    }
+    jobs {
+      id
+      title
+      slug
+      description
+      applyUrl
+      isPublished
+      isFeatured
+      locationNames
+      userEmail
+      postedAt
+      createdAt
+      updatedAt
+      commitment {
+        id
+        title
+        slug
+        createdAt
+        updatedAt
+      }
+      tags {
+        id
+        name
+        slug
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+
+{
+}

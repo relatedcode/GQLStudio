@@ -1,0 +1,59 @@
+https://api.travelgatex.com
+
+{
+  "Authorization": "Apikey [ENTER YOUR API SECRET HERE]"
+}
+
+query GetHotelXCategories($criteria: HotelXCategoryQueryInput!, $relay: RelayInput!) {
+  hotelX {
+    categories(criteria: $criteria, relay: $relay) {
+      edges {
+        node {
+          code
+          createdAt
+          updatedAt
+          categoryData {
+            code
+            categoryCode
+            texts {
+              text
+              language
+            }
+          }
+          error {
+            code
+            type
+            description
+          }
+          adviseMessage {
+            code
+            type
+            description
+            level
+            correlationID
+            external {
+              code
+              message
+            }
+          }
+        }
+        cursor
+      }
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
+    }
+  }
+}
+
+{
+	"criteria": {
+		"access": 5523
+	},
+	"relay": {
+		"first": 10
+	}
+}

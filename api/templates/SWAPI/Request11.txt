@@ -1,0 +1,37 @@
+https://swapi-graph.netlify.app/graphql
+
+{
+}
+
+query GetVehicle($id: ID) {
+  vehicle(id: $id) {
+    name
+    model
+    vehicleClass
+    manufacturers
+    costInCredits
+    length
+    crew
+    passengers
+    maxAtmospheringSpeed
+    cargoCapacity
+    consumables
+    created
+    edited
+    id
+    pilotConnection {
+      pilots {
+        id
+      }
+    }
+    filmConnection {
+      films {
+        id
+      }
+    }
+  }
+}
+
+{
+	"id": "dmVoaWNsZXM6NA=="
+}

@@ -1,0 +1,17 @@
+https://countries.trevorblades.com
+
+{
+}
+
+query GetLanguage($code: ID!) {
+  language(code: $code) {
+    code
+    name
+    native
+    rtl
+  }
+}
+
+{
+  "code": "en"
+}

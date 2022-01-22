@@ -1,0 +1,19 @@
+https://api.pipefy.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+query GetCardsImportations($pipeId: ID!) {
+	 cardsImportations(pipeId: $pipeId) {
+		createdAt id importedCards status url
+		createdBy {
+		avatarUrl avatar_url created_at departmentKey displayName email hasUnreadNotifications id invited locale name timeZone time_zone username
+		preferences { browserNativeNotificationEnabled displayImprovements displayOrganizationReportSidebar displayPipeReportsSidebar favoritePipeIds openNestedStartForm sidebarOpened suggestedTemplatesClosed useNewOpenCard }
+		}
+	}
+}
+
+{
+	"pipeId": 301716008
+}

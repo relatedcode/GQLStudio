@@ -1,0 +1,19 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+query GetCodesOfConduct {
+  codesOfConduct {
+    id
+    key
+    name
+    resourcePath
+    url
+    body
+  }
+}
+
+{
+}

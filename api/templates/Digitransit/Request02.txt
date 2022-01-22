@@ -1,0 +1,36 @@
+https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql
+
+{
+}
+
+query GetFeeds {
+  feeds {
+    feedId
+    agencies {
+      id
+      gtfsId
+      name
+      url
+      timezone
+      lang
+      phone
+      fareUrl
+      routes {
+        id
+        gtfsId
+        shortName
+        longName
+        mode
+        type
+        desc
+        url
+        color
+        textColor
+        bikesAllowed
+      }
+    }
+  }
+}
+
+{
+}

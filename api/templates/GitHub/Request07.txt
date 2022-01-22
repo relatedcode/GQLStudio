@@ -1,0 +1,34 @@
+https://api.github.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+query Search($first: Int, $query: String!, $type: SearchType!) {
+  search(first: $first, query: $query, type: $type) {
+    codeCount
+    discussionCount
+    issueCount
+    repositoryCount
+    userCount
+    wikiCount
+    edges {
+      cursor
+      node {
+        ... on Repository {
+          id
+          url
+          name
+          isPrivate
+          nameWithOwner
+        }
+      }
+    }
+  }
+}
+
+{
+	"first": 50,
+	"query": "swift",
+	"type": "REPOSITORY"
+}

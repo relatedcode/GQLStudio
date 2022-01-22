@@ -1,0 +1,50 @@
+https://api.pipefy.com/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]"
+}
+
+query GetPhaseFrom($phaseId: ID!) {
+	phase(id: $phaseId){
+		cards_count color created_at description done id index isDraft name sequentialId
+		cards(first: 10) {
+			edges {
+				cursor
+				node { age attachments_count checklist_items_checked_count checklist_items_count comments_count createdAt created_at creatorEmail current_phase_age done due_date emailMessagingAddress expired finished_at id inboxEmailsRead late path started_current_phase_at suid title updated_at url uuid }
+			}
+			pageInfo { endCursor hasNextPage hasPreviousPage startCursor }
+		}
+		fieldConditions {
+			id name
+			actions {
+				actionId id phaseFieldId whenEvaluator
+				phase { cards_count color created_at description done expiredCardsCount id index isDraft lateCardsCount name sequentialId }
+				phaseField { allChildrenMustBeDoneToFinishParent allChildrenMustBeDoneToMoveParent canConnectExisting canConnectMultiples canCreateNewConnected childMustExistToFinishParent custom_validation description editable help id index index_name internal_id is_multiple label minimal_view options required synced_with_card type uuid }
+			}
+			condition {
+				expressions_structure id
+				expressions { field_address id operation structure_id value }
+				related_cards { age attachments_count checklist_items_checked_count checklist_items_count comments_count createdAt created_at creatorEmail current_phase_age done due_date emailMessagingAddress expired finished_at id inboxEmailsRead late path started_current_phase_at suid title updated_at url uuid }
+			}
+			phase {
+				cards_count color created_at description done expiredCardsCount id index isDraft lateCardsCount name sequentialId
+				cards_can_be_moved_to_phases { cards_count color created_at description done expiredCardsCount id index isDraft lateCardsCount name sequentialId }
+				fieldConditions { id name }
+				fields { allChildrenMustBeDoneToFinishParent allChildrenMustBeDoneToMoveParent canConnectExisting canConnectMultiples canCreateNewConnected childMustExistToFinishParent custom_validation description editable help id index index_name internal_id is_multiple label minimal_view options required synced_with_card type uuid }
+			}
+		}
+		fields {
+			allChildrenMustBeDoneToFinishParent allChildrenMustBeDoneToMoveParent canConnectExisting canConnectMultiples canCreateNewConnected childMustExistToFinishParent custom_validation description editable help id index index_name internal_id is_multiple label minimal_view options required synced_with_card type uuid
+			phase {
+				id index isDraft lateCardsCount name sequentialId cards_count color created_at description done expiredCardsCount
+				cards_can_be_moved_to_phases { cards_count color created_at description done expiredCardsCount id index isDraft lateCardsCount name sequentialId }
+				fieldConditions { id name }
+				fields { allChildrenMustBeDoneToFinishParent allChildrenMustBeDoneToMoveParent canConnectExisting canConnectMultiples canCreateNewConnected childMustExistToFinishParent custom_validation description editable help id index index_name internal_id is_multiple label minimal_view options required synced_with_card type uuid  }
+			}
+		}
+	}
+}
+
+{
+	"phaseId": 311376485
+}

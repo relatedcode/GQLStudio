@@ -1,0 +1,62 @@
+https://rickandmortyapi.com/graphql
+
+{
+}
+
+query GetLocations($page: Int, $filter: FilterLocation) {
+  locations(page: $page, filter: $filter) {
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    results {
+      id
+      name
+      type
+      dimension
+      created
+      residents {
+        id
+        name
+        status
+        species
+        type
+        gender
+        image
+        created
+        origin {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        location {
+          id
+          name
+          type
+          dimension
+          created
+        }
+        episode {
+          id
+          name
+          air_date
+          episode
+          created
+        }
+      }
+    }
+  }
+}
+
+{
+	"page": 1,
+	"filter": {
+		"name": "ea",
+		"type": "Planet",
+		"dimension": ""
+	}
+}

@@ -1,0 +1,122 @@
+https://api.travelgatex.com
+
+{
+  "Authorization": "Apikey [ENTER YOUR API SECRET HERE]"
+}
+
+query GetHotelXRooms($criteria: HotelXRoomQueryInput!, $relay: RelayInput!) {
+  hotelX {
+    rooms(criteria: $criteria, relay: $relay) {
+      edges {
+        node {
+          code
+          createdAt
+          updatedAt
+          roomData {
+            code
+            roomCode
+            source
+            area
+            texts {
+              text
+              language
+            }
+            occupancies {
+              total {
+                min
+                max
+              }
+              infants {
+                min
+                max
+              }
+              children {
+                min
+                max
+              }
+              adults {
+                min
+                max
+              }
+            }
+            amenities {
+              code
+              type
+              texts {
+                text
+                language
+              }
+            }
+            views {
+              texts {
+                text
+                language
+              }
+              viewCode
+            }
+            medias {
+              code
+              order
+              type
+              updatedAt
+              url
+              texts {
+                text
+                language
+              }
+            }
+            beds {
+              type
+              count
+              shared
+            }
+            allAmenities {
+              edges {
+                cursor
+              }
+              pageInfo {
+                hasNextPage
+                hasPreviousPage
+                startCursor
+                endCursor
+              }
+            }
+          }
+          error {
+            code
+            type
+            description
+          }
+          adviseMessage {
+            code
+            type
+            description
+            level
+            correlationID
+            external {
+              code
+              message
+            }
+          }
+        }
+        cursor
+      }
+      token
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        startCursor
+        endCursor
+      }
+    }
+  }
+}
+
+{
+	"criteria": {
+		"access": 6305
+	},
+	"relay": {
+		"first": 10
+	}
+}

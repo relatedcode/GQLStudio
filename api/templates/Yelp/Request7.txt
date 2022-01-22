@@ -1,0 +1,101 @@
+https://api.yelp.com/v3/graphql
+
+{
+  "Authorization": "Bearer [ENTER YOUR API SECRET HERE]",
+  "Accept-Language": "en-US"
+}
+
+query SearchEvent {
+  event_search {
+    total
+    events {
+      id
+      name
+      business_id
+      attending_count
+      category
+      cost
+      cost_max
+      description
+      event_site_url
+      image_url
+      interested_count
+      is_canceled
+      is_free
+      is_official
+      latitude
+      longitude
+      tickets_url
+      time_end
+      time_start
+      business {
+        name
+        id
+        alias
+        is_claimed
+        is_closed
+        url
+        phone
+        display_phone
+        review_count
+        rating
+        price
+        photos
+        distance
+        categories {
+          title
+          alias
+        }
+        location {
+          address1
+          address2
+          address3
+          city
+          state
+          postal_code
+          country
+          formatted_address
+        }
+        coordinates {
+          latitude
+          longitude
+        }
+        hours {
+          hours_type
+          is_open_now
+        }
+        special_hours {
+          is_overnight
+          is_closed
+          end
+          start
+          date
+        }
+        reviews {
+          id
+          rating
+          text
+          time_created
+          url
+        }
+        messaging {
+          url
+          use_case_text
+        }
+      }
+      location {
+        address1
+        address2
+        address3
+        city
+        state
+        postal_code
+        country
+        formatted_address
+      }
+    }
+  }
+}
+
+{
+}

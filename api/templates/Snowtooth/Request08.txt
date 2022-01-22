@@ -1,0 +1,23 @@
+https://snowtooth.moonhighway.com
+
+{
+}
+
+mutation UpdateLiftStatus($id: ID!, $status: LiftStatus!) {
+  setLiftStatus(id: $id, status: $status) {
+    id
+    name
+    status
+    capacity
+    night
+    elevationGain
+    trailAccess {
+      id
+    }
+  }
+}
+
+{
+	"id": "jolly-roger",
+	"status": "OPEN"
+}
